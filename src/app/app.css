@@ -1,0 +1,14 @@
+/* app.css */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* app-sidebar {
+  flex: 0 0 15rem;
+} */
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}

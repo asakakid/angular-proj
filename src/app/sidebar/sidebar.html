@@ -1,0 +1,51 @@
+<nav class="sidebar">
+  
+  <!-- logo -->
+  <div class="logo-wrapper">
+    <img src="assets/logo.svg" alt="Lumina logo" />
+    <h1 class="brand-name">lumina</h1>
+  </div>
+
+  <!-- search button -->
+<form onsubmit="event.preventDefault();" role="search">
+  <label for="search">Search for stuff</label>
+  <input id="search" type="search" placeholder="Search..." autofocus required />
+  <button type="submit">Go</button>    
+</form>
+
+<span style="display:block; font-size:0.75rem; color:#4C5168;">MAIN MENU</span>
+
+  <!-- main navigations -->
+<ul class="nav-links">
+  <li>
+    <a routerLink="/dashboard" routerLinkActive="active-link" class="nav-item">
+      <mat-icon>dashboard</mat-icon>
+      Dashboard
+    </a>
+  </li>
+  <li>
+    <a routerLink="/inventory" class="nav-item">
+      <mat-icon>inventory</mat-icon>
+      Inventory
+    </a>
+  </li>
+</ul>
+
+<span style="display:block; font-size:0.75rem; color:#4C5168;">HELP & SUPPORT </span>
+
+  <!-- bottom navigations -->
+  <ul class="nav-links">
+    <li>
+      <a href="#" class="nav-item">
+        <mat-icon>help</mat-icon>
+        Help & Support
+      </a>
+    </li>
+    <li>
+      <a href="#" class="nav-item">
+        <mat-icon>settings</mat-icon>
+        Settings
+      </a>
+    </li>
+  </ul>
+</nav>
