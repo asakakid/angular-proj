@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { Sidebar } from "./sidebar/sidebar";
+import { Sidebar } from "./components/sidebar/sidebar";
 import { MatIconModule } from '@angular/material/icon'
 import { RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';

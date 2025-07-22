@@ -12,6 +12,7 @@
 
 .tile-content {
   background-color: #f5f5f5;
+  border: 3px solid #4C5168;
   padding: 16px;
   border-radius: 12px;
   text-align: center;
@@ -22,6 +23,7 @@
 }
 
 .tile-content:hover {
-  background-color: #e0e0e0;
+  background-color: #4C5168;
+  color: #f5f5f5;
   cursor: pointer;
 }

@@ -1,0 +1,94 @@
+<h2>{{ categoryName | titlecase }} Stocks</h2>
+
+<div *ngIf="stocks.length > 0; else noData">
+  <table class="stock-table">
+    <thead>
+      <tr>
+        <th>Actions</th>
+        <th>No</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stock of stocks">
+        <td><button (click)="editStock(stock)">Edit</button></td>
+        <td>{{ stock.no }}</td>
+        <td>{{ stock.name }}</td>
+        <td>{{ stock.price }}</td>
+        <td>{{ stock.quantity }}</td>
+        <td>{{ stock.availability ? 'Yes' : 'No' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noData>
+  <p>No stock found for this category.</p>
+</ng-template>
+
+<!-- ✅ Edit Modal -->
+<div class="modal-backdrop" *ngIf="isEditModalOpen">
+  <div class="modal">
+    <h3>Edit Stock</h3>
+    
+    <label>
+      Name:
+      <input [(ngModel)]="selectedStock.name" />
+    </label>
+
+    <label>
+      Price:
+      <input type="number" [(ngModel)]="selectedStock.price" />
+    </label>
+
+    <label>
+      Quantity:
+      <input type="number" [(ngModel)]="selectedStock.quantity" />
+    </label>
+
+    <label>
+      Availability:
+      <input type="checkbox" [(ngModel)]="selectedStock.availability" />
+    </label>
+
+    <div class="modal-actions">
+      <button (click)="saveEdit()">Save</button>
+      <button (click)="cancelEdit()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Edit Modal -->
+<div class="modal-backdrop" *ngIf="isEditModalOpen">
+  <div class="modal">
+    <h3>Edit Stock</h3>
+    
+    <label>
+      Name:
+      <input [(ngModel)]="selectedStock.name" />
+    </label>
+
+    <label>
+      Price:
+      <input type="number" [(ngModel)]="selectedStock.price" />
+    </label>
+
+    <label>
+      Quantity:
+      <input type="number" [(ngModel)]="selectedStock.quantity" />
+    </label>
+
+    <label>
+      Availability:
+      <input type="checkbox" [(ngModel)]="selectedStock.availability" />
+    </label>
+
+    <div class="modal-actions">
+      <button (click)="saveEdit()">Save</button>
+      <button (click)="cancelEdit()">Cancel</button>
+    </div>
+  </div>
+</div>
