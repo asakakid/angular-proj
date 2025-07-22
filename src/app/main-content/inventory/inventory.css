@@ -1,0 +1,27 @@
+.category-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  min-height: 200px; /* ✅ this is important */
+}
+
+.category-link {
+  text-decoration: none;
+}
+
+.tile-content {
+  background-color: #f5f5f5;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  font-family: 'Quattrocento';
+  font-weight: bold;
+  color: #4C5168;
+  transition: 0.2s ease-in-out;
+}
+
+.tile-content:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}

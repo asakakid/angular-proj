@@ -59,10 +59,13 @@
   color: #9EC99C;                  
 }
 
-/* .active-link {
-  background-color: #657BA3;  /* Highlight bg */
-  /* color: #fff;                Change text/icon color */
+.active-link mat-icon {
+  color: #9EC99C;
+}
 
+.active-link {
+  color: #9EC99C;
+}
 
 
 /* Logo section */

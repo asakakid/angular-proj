@@ -1,1 +1,28 @@
-<p>inventory works!</p>
+<header>
+  <h1 style="color: #4C5168; font-family: 'Quattrocento'; font-weight: bold;">
+    Inventory
+  </h1>
+  <span style="color: #4C5168; font-family: 'Quattrocento'; font-weight: bold;">
+    Current stocks:
+  </span>
+  <span
+    [style.font-weight]="'bold'"
+    [style.color]="stock < 10 ? 'red' : (stock < 30 ? 'orange' : 'green')"
+    style="font-family: 'Quattrocento';"
+  >
+    {{ stock }}
+  </span>
+</header>
+
+<main *ngIf="!route.firstChild" class="category-gallery">
+  <div *ngFor="let cat of categories" class="category-tile">
+    <a [routerLink]="cat.route" class="category-link">
+      <div class="tile-content">
+        {{ cat.name }}
+      </div>
+    </a>
+  </div>
+</main>
+
+<!-- ✅ This is the missing piece -->
+<router-outlet></router-outlet>
